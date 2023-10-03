@@ -1,15 +1,13 @@
 /* Global */
 :root {
   /* Color */
-  --color-white: #ffffff;
+  --color-black: #000000;
   --color-grey-white: #f7f6ee;
   --color-light-grey: #bfbfbf;
   --color-grey: #949494;
   --color-light-pink: #ffdada;
   --color-light-yellow: #fffec3;
-  --color-light-orange: #fad665;
   --color-olive-green: #5d9f40;
-  --color-black: #000000;
   /* Font Size */
   --font-large: 40px;
   --font-medium: 22px;
@@ -21,511 +19,68 @@
   --weight-semi-bold: 600;
   --weight-regular: 400;
   /* Size */
-  --size-border-radius: 4px;
-  /* Animation Duration */
-  --animation-duration: 300ms;
-}
-
-/* Universal Tags */
-* {
-  box-sizing: border-box;
+  --size-border-radius: 20px;
 }
 
 body {
-  background: url('img/Home_Background.png') center/cover no-repeat;
+  background: url("images/Home_Background.png") center/cover repeat;
   margin: 0px;
   font-family: "Audiowide", sans-serif;
   cursor: default;
 }
 
-a {
-  text-decoration: none;
-  color: var(--color-grey);
-}
-
-ul {
-  list-style: none;
-  padding-left: 0px;
-}
-
-li {
-  list-style: none;
-}
-
-span {
-  color: var(--color-grey);
-}
-button {
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  color: var(--color-grey);
-}
-
-/* Typography */
-h1 {
-  font-size: var(--font-large);
-  font-weight: var(--weight-bold);
-  color: var(--color-olive-green);
-  margin: 16px 0px;
-}
-
-h2 {
-  font-size: var(--font-medium);
-  font-weight: var(--weight-regular);
-  color: var(--color-olive-green);
-  margin: 8px 0px;
-}
-
+/* Font color, size */
+h1,
+h2,
 h3 {
-  font-size: var(--font-regular);
-  font-weight: var(--weight-regular);
-  color: var(--color-grey);
-  margin: 8px 0px;
+  color: var(--color-olive-green);
 }
-
+dl {
+  color: var(--color-olive-green);
+}
+ul {
+  color: var(--color-olive-green);
+}
 p {
-  font-size: var(--font-regular);
-  font-weight: var(--weight-regular);
-  color: var(--color-grey);
-  margin: 4px 0px;
-}
-
-/* Navbar */
-#navbar {
-  position: fixed;
-  margin: 0 0 -20px 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
   color: var(--color-olive-green);
-  padding: 16px;
-  transition: all var(--animation-duration) ease-in-out;
-  z-index: 1;
 }
 
-#navbar.navbar--dark {
-  background-color: var(--color-black);
-  padding: 8px;
-  height: 65px;
-}
-
-.navbar__menu {
-  display: flex;
-}
-
-.navbar__logo {
-  font-size: var(--font-medium);
-  font-weight: var(--weight-semi-bold);
-}
-
-.logo {
+.Main {
   position: relative;
-  width: 75px;
-  height: 75px;
-  top: -10px;
-  left: -10%;
-}
-
-.navbar__menu__item {
-  position: relative;
-  top: -15px;
-  padding: 8px 12px;
-  margin: 0px 4px;
-  cursor: pointer;
-  border-radius: var(--size-border-radius);
-}
-
-.navbar__menu__item:hover {
-  border: 1px solid var(--color-olive-green);
-}
-
-.navbar__toggle-btn {
-  position: absolute;
-  top: 24px;
-  right: 32px;
-  font-size: 24px;
-  display: none;
-}
-
-/* Home */
-#home {
-  padding: 40px;
-  padding-top: 120px;
   text-align: center;
 }
 
-.home__avatar {
-  width: 250px;
-  height: 250px;
+img {
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
-  border: 2px solid var(--color-white);
 }
-
-.home__title {
-  font-size: 30px;
-  color: var(--color-olive-green);
-}
-
-.home__discription {
-  color: var(--color-olive-green);
-}
-
-.home__contact {
-  font-size: var(--font-regular);
-  font-weight: var(--weight-bold);
-  margin: 24px;
-  padding: 8px 12px;
-  border-radius: var(--size-border-radius);
-  color: var(--color-light-grey);
-}
-.home__contact:hover {
-  border: 2px solid var(--color-light-grey);
-}
-
-/* Section common */
-.section {
-  padding: 50px;
-  text-align: center;
-  margin: auto;
-}
-
-.section__container {
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* About */
-
-.about__majors {
+div.Langs, 
+div.LeadershipExperience, 
+div.Skills, 
+div.Contacts {
   display: flex;
-  justify-content: space-between;
-  margin: 80px 0px;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  flex-direction: column;  /* Stack children vertically */
 }
 
-.major__icon {
-  width: 170px;
-  height: 170px;
-  line-height: 170px;
-  font-size: 70px;
-  color: var(--color-light-grey);
-  margin: auto;
-  border: 1px solid var(--color-light-grey);
-  border-radius: 50%;
-  margin-bottom: 16px;
-}
 
-.major__icon i {
-  transition: all var(--animation-duration) ease;
-}
-
-.major__icon:hover i {
+hr {
+  border-style: dashed;
   color: var(--color-light-pink);
-  transform: rotate(-15deg) scale(1.2);
 }
 
-.job__logo {
-  width: 135px;
-  height: 100px;
-  margin: 5px 20px;
+iframe.vids {
+  width: 80%;  /* Adjust this width as needed */
+  height: auto;
+  max-width: 800px; /* Set a maximum width if necessary */
+  max-height: 450px; /* Set a maximum height if necessary */
 }
-.job {
-  display: flex;
-  align-items: center;
-}
-
-.job__discription {
-  margin: 0px 16px;
-  text-align: left;
-}
-
-.job__name,
-.job__period {
-  color: var(--color-light-grey);
-}
-
-.job__name {
-  font-size: var(--font-small);
-}
-
-.job__period {
-  font-size: var(--font-micro)
-}
-
-/* Skills */
-.skillset {
-  display: flex;
-  margin: 20px 0px;
-}
-
-.skillset__left {
-  flex-basis: 60%;
-  background-color: var(--color-grey-white);
-}
-
-.skill {
-  margin-bottom: 8px;
-}
-
-.skill__description {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 40px;
-}
-
-.skill__bar {
-  width: 100%;
-  height: 3px;
-  margin: 0px 33px 0px 33px;
-  background-color: var(--color-light-grey);
-}
-
-.skill__value {
-  height: 3px;
-  background-color: var(--color-light-orange);
-}
-
-.skillset__right {
-  flex-basis: 60%;
-  background-color: var(--color-grey-white);
-}
-
-.tools, .etc {
-  padding: 30px;
-}
-
-/* Work */
-
-.work__categories {
-  margin: 40px;
-}
-.category__btn {
-  border: 1px solid;
-  border-radius: var(--size-border-radius);
-  font-size: var(--font-regular);
-  padding: 8px 48px;
-}
-
-.category__btn:hover,
-.category__btn.active {
-  background-color: var(--color-light-grey);
-  color: var(--color-grey-white);
-}
-.category__brn.active .category__count,
-.category__btn:hover .category__count {
-  opacity: 1;
-  top: 0;
-}
-.category__count {
-  background-color: var(--color-light-orange);
-  border-radius: 50%;
-  color: var(--color-white);
-  width: 18px;
-  height: 18px;
-  line-height: 18px;
-  display: inline-block;
-  position: relative;
-  top: -20px;
-  left: 4px;
-  opacity: 0;
-  transition: all var(--animation-duration) ease-in;
-}
-
-.work__projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  opacity: 1;
-}
-
-.work__projects.anim-out {
-  opacity: 0;
-  transform: scale(0.96) translateY(40px);
-  transition: all var(--animation-duration) ease-out;
-}
-
-.project {
-  position: relative;
-  width: 280px;
-  height: 250px;
-  margin: 2px;
-  justify-content: center;
-  align-items: center;
-}
-
-.project.invisible {
-  display: none;
-}
-
-.project__img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.project__description {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: var(--color-white);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: var(--color-black);
-  opacity: 0.0;
-  transform: translateY(10px);
-  transition: all var(--animation-duration) ease-in;
-}
-
-.project:hover .project__description {
-  opacity: 0.8;
-  transform: translateY(0px);
-}
-
-.project__description h3:after {
-  content: '';
-  display: block;
-  position: relative;
-  left: 50%;
-  margin-left: -12px;
-  margin-top: 8px;
-  width: 25px;
-  height: 2px;
-  opacity: 0.8;
-  background-color: var(--color-grey-white);
-}
-
-/* Testimonials */
-#testimonials {
-  background-color: var(--color-grey-white);
-  margin: 35px 35px;
-  border-radius: 0.7%;
-}
-
-.testimonials {
-  margin: 40px;
-}
-
-.testimonial {
-  display: flex;
-  margin: 32px 0px;
-}
-
-.testimonial__avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-}
-
-.testimonial__avatar:nth-child(odd) {
-  margin-right: 40px;
-}
-.testimonial__avatar:nth-child(even) {
-  margin-left: 40px;
-}
-
-.testimonial__speech-bubble {
-  padding: 18px;
-  background-color: var(--color-white);
-  border-radius: var(--size-border-radius);
-}
-
-/* Contact */
-.contact__links {
-  font-size: var(--font-medium);
-  margin: 15px;
-}
-
-.contact__links i:hover {
-  transform: scale(1.1);
-  color: var(--color-olive-green);
-}
-/* For below 768px screen width */
-@media screen and (max-width: 767px) {
-  .navbar__toggle-btn {
-    display: flex;
-    display: block;
-  }
-
-  #navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: var(--color-black);
-  }
-  #navbar.navbar--dark {
-    padding: 16px;
-  }
-  .navbar__menu {
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    display: none;
-  }
-
-  .navbar__menu.open {
-    display: block;
-    background-color: var(--color-black);
-  }
-
-  .about__majors {
-    flex-direction: column;
-  }
-
-  .major {
-    margin-bottom: 38px;
-  }
-
-  .project {
-    flex-grow: 1;
-  }
-
-  .testimonial__avatar {
-    width: 80px;
-    height: 80px;
-  }
-
-  .skillset {
-    display: flex;
-    margin: 20px 0px;
-  }
-  
-  .skillset__left {
-    flex-basis: 60%;
-    background-color: var(--color-grey-white);
-  }
-  
-  .skill {
-    margin-bottom: 8px;
-  }
-  
-  .skill__description {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 40px;
-  }
-  
-  .skill__bar {
-    width: 100%;
-    height: 3px;
-    margin: 0px 33px 0px 33px;
-    background-color: var(--color-light-grey);
-  }
-  
-  .skill__value {
-    height: 3px;
-    background-color: var(--color-light-orange);
-  }
-  
-  .skillset__right {
-    flex-basis: 60%;
-    background-color: var(--color-grey-white);
-    margin-right: 30px;
-  }
-  
-  .tools, .etc {
-    padding: 30px;
-  }
+.vids {
+  width: 80%;  /* Adjust this value as needed to increase/decrease the width */
+  height: 450px; /* Adjust this value as needed to increase/decrease the height */
+  margin: 0 auto; /* This will center the iframe in its parent div */
+  display: block; /* Ensures the iframe behaves like a block-level element */
 }
