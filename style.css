@@ -35,6 +35,9 @@ h2,
 h3 {
   color: var(--color-olive-green);
 }
+h3 {
+  --font-micro: 10px;
+}
 dl {
   color: var(--color-olive-green);
 }
